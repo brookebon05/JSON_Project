@@ -1,5 +1,6 @@
 import json
 
+# Brooke Bonadies
 # 2.27
 
 infile2 = open("US_fires_9_14.json", "r")

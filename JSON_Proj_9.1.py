@@ -1,5 +1,6 @@
 import json
 
+# Brooke Bonadies
 # 2.24
 infile = open("US_fires_9_1.json", "r")
 outfile = open("readable_US_fires_9_1.json", "w")
