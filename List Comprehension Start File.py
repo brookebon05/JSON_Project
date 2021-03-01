@@ -55,30 +55,38 @@ print(new_list)
 x = [i for i in range(10)]
 print(x)
 
-
 # Output -[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 # 2) creating a list that evaluates an expression
-
+squares = [x ** 2 for x in range(10)]
+print(squares)
 
 # Output -[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 
 # 3) creating a list from another list
-
+list1 = [3, 4, 5]
+multiplied = [item * 3 for item in list1]
+print(multiplied)
 
 # [9,12,15]
 
 
 # 4) using list comprehension for string manipulation
+listOfWords = ["this", "is", "a", "list", "of", "words"]
+items = [word[0] for word in listOfWords]
+print(items)
 
-
+# can use indeces with strings
 # Output - ['t', 'i', 'a', 'l', 'o', 'w']
 
 
 # 5) Let's show how easy you can convert lower case / upper case letters.
-
+output = [x.lower() for x in ["A", "B", "C"]]
+print(output)
+output = [x.upper() for x in ["a", "b", "c"]]
+print(output)
 
 # Output 1 - ['a', 'b', 'c']
 
