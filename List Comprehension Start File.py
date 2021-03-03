@@ -95,13 +95,17 @@ print(output)
 
 
 # 6) Creating a list based on a condition
-
+new_range = [i * i for i in range(5) if i % 2 == 0]
+print(new_range)
 
 # Output - [0, 4, 16]
 
 
 # 7) Extracting numbers only from a string and putting it in a list
+string1 = "Hello 12345 World"
+new_list1 = [h for h in string1 if h.isdigit()]
 
+print(new_list1)
 
 # Output - ['1', '2', '3', '4', '5']
 
@@ -120,6 +124,10 @@ this is line5
 
 Save the file as test.txt """
 
+# reader reads by lines by default
+thefile = open("test.txt", "r")
+result = [i for i in thefile if "line3" in i]
+print(result)
 
 # Output: ['this is line3']
 
@@ -127,27 +135,34 @@ Save the file as test.txt """
 # 9) Using functions in list comprehension
 
 # Create a function and name it double:
+def double(x):
+    return x * 2
 
 
 # If you now just print that function with a value in it, it should look like this:
-
+print(double(10))
 
 # Answer - 20
 
 
 # We can easily use list comprehension on that function.
-
-
+i = [double(x) for x in range(10)]
+print(i)
 # Output - [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 
 
 # 10) adding an IF condition to the above
+i = [double(x) for x in range(10) if x % 2 == 0]
+print(i)
 
+# Does range first, then condition, then Expression (double(x))
 
 # Output - [0, 4, 8, 12, 16]
 
 
 # 11) You can add more arguments (using multiple iterators and lists):
+mylist = [x + y for x in [10, 20, 30] for y in [20, 30, 40]]
+print(mylist)
+# adds x's all first to each y
 
-
-# Output - [30, 50, 70, 50, 70, 90, 70, 90, 110]
+# Output - [30, 40, 50, 40, 50, 60, 50, 60, 70]
