@@ -54,3 +54,6 @@ my_layout = Layout(title="Global Earthquakes")
 
 fig = {"data": data, "layout": my_layout}
 offline.plot(fig, filename="globale_earthquakes.html")
+
+infile.close()
+outfile.close()

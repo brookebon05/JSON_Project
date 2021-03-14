@@ -58,3 +58,6 @@ my_layout = Layout(title="Fires 9/14/2020 through 9/20/2020")
 
 fig = {"data": data2, "layout": my_layout}
 offline.plot(fig, filename="US_Fires_9_1.html")
+
+infile2.close()
+outfile2.close()
